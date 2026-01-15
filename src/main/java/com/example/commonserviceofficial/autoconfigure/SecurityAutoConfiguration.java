@@ -41,7 +41,13 @@ public class SecurityAutoConfiguration {
         return http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(exchanges -> exchanges
-                        .pathMatchers("/actuator/**", "/api/test/**").permitAll()
+                        .pathMatchers(
+                                "/actuator/**",
+                                "/api/auth/login",
+                                "/api/auth/register",
+                                "/api/auth/refresh",
+                                "/api/test/**"
+                        ).permitAll()
                         .anyExchange().authenticated()
                 )
                 .addFilterBefore(jwtAuthenticationFilter, SecurityWebFiltersOrder.AUTHENTICATION)

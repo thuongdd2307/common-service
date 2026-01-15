@@ -1027,3 +1027,27 @@ Using generated security password: 195272ae-797e-4d9a-8e2a-8ffb50ed8617
 
 2026-01-15T14:08:02.129+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
 2026-01-15T14:08:02.245+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.271 seconds (process running for 2.975)
+2026-01-15T15:18:02.452+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 22624 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-15T15:18:02.454+07:00 DEBUG [hddt-common-service,] 22624 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-15T15:18:02.455+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-15T15:18:03.321+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=89f3342e-9e0f-38de-b306-1c082c79e1b4
+2026-01-15T15:18:04.003+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-15T15:18:04.004+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-15T15:18:04.005+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-15T15:18:04.005+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-15T15:18:04.005+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-15T15:18:04.145+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5fb67cb8-6bc8-4201-b1b7-eaf90ebc8f59
+
+2026-01-15T15:18:04.517+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2026-01-15T15:18:04.621+07:00  INFO [hddt-common-service,] 22624 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.613 seconds (process running for 3.235)
