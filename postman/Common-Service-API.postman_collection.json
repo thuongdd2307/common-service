@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "common-service-api",
+		"name": "Common Service API",
+		"description": "Collection để test Common Service APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Endpoints",
+			"item": [
+				{
+					"name": "Hello - Public",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/test/hello",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "test", "hello"]
+						},
+						"description": "Test endpoint công khai, không cần authentication"
+					},
+					"response": []
+				},
+				{
+					"name": "Health Check - Public",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/test/health",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "test", "health"]
+						},
+						"description": "Health check endpoint"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actuator Endpoints",
+			"item": [
+				{
+					"name": "Actuator Health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/actuator/health",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["actuator", "health"]
+						},
+						"description": "Spring Boot Actuator health endpoint"
+					},
+					"response": []
+				},
+				{
+					"name": "Actuator Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/actuator/info",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["actuator", "info"]
+						},
+						"description": "Application info endpoint"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JWT Authentication Demo",
+			"item": [
+				{
+					"name": "Generate JWT Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Lưu token vào environment variable",
+									"if (pm.response.code === 200) {",
+									"    var jsonData = pm.response.json();",
+									"    if (jsonData.data && jsonData.data.token) {",
+									"        pm.environment.set('jwt_token', jsonData.data.token);",
+									"        console.log('Token saved:', jsonData.data.token);",
+									"    }",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"admin\",\n  \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/auth/login",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "auth", "login"]
+						},
+						"description": "Login để lấy JWT token (endpoint này cần implement trong microservice thực tế)"
+					},
+					"response": []
+				},
+				{
+					"name": "Protected Endpoint - With Token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/protected/resource",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "protected", "resource"]
+						},
+						"description": "Endpoint yêu cầu JWT token"
+					},
+					"response": []
+				},
+				{
+					"name": "Protected Endpoint - Without Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/protected/resource",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "protected", "resource"]
+						},
+						"description": "Test endpoint protected mà không có token (sẽ trả về 401)"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}

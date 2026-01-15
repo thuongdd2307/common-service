@@ -1,0 +1,121 @@
+spring:
+  application:
+    name: hddt-common-service
+
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+    banner-mode: "off"
+
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+server:
+  port: 8081
+
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    default-property-inclusion: non_null
+
+
+# ===================== SECURITY =====================
+security:
+  jwt:
+    enabled: true
+
+    # >= 32 bytes (256 bits) – REQUIRED by RFC 7518
+    secret: "THIS_IS_A_32_BYTE_SECRET_KEY_FOR_JWT_2026"
+
+    issuer: common-service
+
+    # seconds
+    expiration-seconds: 3600          # 1 hour
+    refresh-expiration-seconds: 86400 # 1 day
+
+    header:
+      authorization: Authorization
+      prefix: Bearer
+
+    claim:
+      user-id: user_id
+      username: username
+      roles: role_codes
+
+
+  # ===== Permission-based authorization =====
+  permission:
+    enabled: true
+    role-prefix: ROLE_
+    permission-prefix: PERM_
+
+
+# ===================== GATEWAY =====================
+gateway:
+  security:
+    enabled: true
+
+    # headers propagated to downstream services
+    headers:
+      trace-id: X-Trace-Id
+      user-id: X-User-Id
+      username: X-Username
+      roles: X-Roles
+
+    # Optional: block routes at gateway level
+    rules:
+      enabled: false
+      definitions:
+        - path: /admin/**
+          roles: [ADMIN]
+        - path: /internal/**
+          roles: [SYSTEM]
+
+
+# ===================== LOGGING =====================
+logging:
+  level:
+    root: INFO
+    com.example.commonserviceofficial: DEBUG
+    org.springframework.security: INFO
+    org.springframework.cloud.gateway: INFO
+
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId}]"
+
+  file:
+    name: logs/common-service.log
+
+
+# ===================== COMMON LOGGING =====================
+common:
+  logging:
+    enabled: true
+
+    request:
+      enabled: true
+      include-headers: true
+      include-body: false
+      max-body-size: 2048
+
+    response:
+      enabled: true
+      include-body: false
+
+    trace:
+      enabled: true
+      header-name: X-Trace-Id
+
+
+# ===================== MANAGEMENT =====================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+  endpoint:
+    health:
+      show-details: never

@@ -1,0 +1,957 @@
+2026-01-14T14:01:18.473+07:00  INFO [common-service,] 15784 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 15784 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:01:18.475+07:00  INFO [common-service,] 15784 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:01:18.891+07:00  INFO [common-service,] 15784 --- [common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T14:01:19.098+07:00  WARN [common-service,] 15784 --- [common-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.client.loadbalancer.reactive.ReactiveLoadBalancer]
+2026-01-14T14:01:19.108+07:00  INFO [common-service,] 15784 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:01:19.130+07:00 ERROR [common-service,] 15784 --- [common-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.client.loadbalancer.reactive.ReactiveLoadBalancer]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:372) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.annotation.TypeMappedAnnotation.adapt(TypeMappedAnnotation.java:466) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.annotation.TypeMappedAnnotation.getValue(TypeMappedAnnotation.java:391) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.annotation.TypeMappedAnnotation.asMap(TypeMappedAnnotation.java:278) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.annotation.AbstractMergedAnnotation.asAnnotationAttributes(AbstractMergedAnnotation.java:191) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.determineBeanNameFromAnnotation(AnnotationBeanNameGenerator.java:144) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.generateBeanName(AnnotationBeanNameGenerator.java:110) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.registerBeanDefinitionForImportedConfigurationClass(ConfigurationClassBeanDefinitionReader.java:161) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:142) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:121) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.example.commonserviceofficial.CommonServiceOfficialApplication.main(CommonServiceOfficialApplication.java:10) ~[classes/:na]
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.client.loadbalancer.reactive.ReactiveLoadBalancer
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:321) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:362) ~[spring-core-6.2.1.jar:6.2.1]
+	... 22 common frames omitted
+
+2026-01-14T14:02:32.995+07:00  INFO [common-service,] 372 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 372 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:02:32.997+07:00  INFO [common-service,] 372 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:02:33.064+07:00  WARN [common-service,] 372 --- [common-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-01-14T14:02:33.297+07:00 ERROR [common-service,] 372 --- [common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web application could not be started as there was no org.springframework.boot.web.servlet.server.ServletWebServerFactory bean defined in the context.
+
+Action:
+
+Check your application's dependencies for a supported servlet web server.
+Check the configured web application type.
+
+2026-01-14T14:05:05.251+07:00  INFO [common-service,] 16476 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 16476 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:05:05.253+07:00  INFO [common-service,] 16476 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:05:05.329+07:00  WARN [common-service,] 16476 --- [common-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-01-14T14:05:05.577+07:00 ERROR [common-service,] 16476 --- [common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web application could not be started as there was no org.springframework.boot.web.servlet.server.ServletWebServerFactory bean defined in the context.
+
+Action:
+
+Check your application's dependencies for a supported servlet web server.
+Check the configured web application type.
+
+2026-01-14T14:20:04.653+07:00  INFO [common-service,] 7144 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 7144 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:20:04.655+07:00  INFO [common-service,] 7144 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:20:05.042+07:00  INFO [common-service,] 7144 --- [common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T14:20:05.248+07:00  WARN [common-service,] 7144 --- [common-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.client.loadbalancer.reactive.ReactiveLoadBalancer]
+2026-01-14T14:20:05.257+07:00  INFO [common-service,] 7144 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:20:05.272+07:00 ERROR [common-service,] 7144 --- [common-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.client.loadbalancer.reactive.ReactiveLoadBalancer]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:372) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.annotation.TypeMappedAnnotation.adapt(TypeMappedAnnotation.java:466) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.annotation.TypeMappedAnnotation.getValue(TypeMappedAnnotation.java:391) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.annotation.TypeMappedAnnotation.asMap(TypeMappedAnnotation.java:278) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.annotation.AbstractMergedAnnotation.asAnnotationAttributes(AbstractMergedAnnotation.java:191) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.determineBeanNameFromAnnotation(AnnotationBeanNameGenerator.java:144) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.generateBeanName(AnnotationBeanNameGenerator.java:110) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.registerBeanDefinitionForImportedConfigurationClass(ConfigurationClassBeanDefinitionReader.java:161) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:142) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:121) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.example.commonserviceofficial.CommonServiceOfficialApplication.main(CommonServiceOfficialApplication.java:10) ~[classes/:na]
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.client.loadbalancer.reactive.ReactiveLoadBalancer
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:321) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:362) ~[spring-core-6.2.1.jar:6.2.1]
+	... 22 common frames omitted
+
+2026-01-14T14:22:47.673+07:00  INFO [common-service,] 25712 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 25712 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:22:47.675+07:00  INFO [common-service,] 25712 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:22:48.078+07:00  INFO [common-service,] 25712 --- [common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T14:22:48.422+07:00  INFO [common-service,] 25712 --- [common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98697950-c157-3afd-bc19-6b63e3464b26
+2026-01-14T14:22:48.658+07:00  INFO [common-service,] 25712 --- [common-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14T14:22:48.667+07:00  INFO [common-service,] 25712 --- [common-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14T14:22:48.668+07:00  INFO [common-service,] 25712 --- [common-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-14T14:22:48.715+07:00  INFO [common-service,] 25712 --- [common-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-14T14:22:48.715+07:00  INFO [common-service,] 25712 --- [common-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1008 ms
+2026-01-14T14:22:48.727+07:00 ERROR [common-service,] 25712 --- [common-service] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'jwtAuthenticationFilter' parameter 0: Error creating bean with name 'jwtTokenProvider' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Failed to instantiate [com.example.commonserviceofficial.security.JwtTokenProvider]: Factory method 'jwtTokenProvider' threw exception with message: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+2026-01-14T14:22:48.746+07:00  INFO [common-service,] 25712 --- [common-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-14T14:22:48.752+07:00  WARN [common-service,] 25712 --- [common-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-01-14T14:22:48.762+07:00  INFO [common-service,] 25712 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:22:48.776+07:00 ERROR [common-service,] 25712 --- [common-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.example.commonserviceofficial.CommonServiceOfficialApplication.main(CommonServiceOfficialApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.4.1.jar:3.4.1]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'jwtAuthenticationFilter' parameter 0: Error creating bean with name 'jwtTokenProvider' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Failed to instantiate [com.example.commonserviceofficial.security.JwtTokenProvider]: Factory method 'jwtTokenProvider' threw exception with message: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.1.jar:3.4.1]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Failed to instantiate [com.example.commonserviceofficial.security.JwtTokenProvider]: Factory method 'jwtTokenProvider' threw exception with message: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 56 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.commonserviceofficial.security.JwtTokenProvider]: Factory method 'jwtTokenProvider' threw exception with message: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 70 common frames omitted
+Caused by: io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at io.jsonwebtoken.security.Keys.hmacShaKeyFor(Keys.java:96) ~[jjwt-api-0.11.5.jar:0.11.5]
+	at com.example.commonserviceofficial.security.JwtTokenProvider.<init>(JwtTokenProvider.java:16) ~[classes/:na]
+	at com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration.jwtTokenProvider(SecurityAutoConfiguration.java:24) ~[classes/:na]
+	at com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration$$SpringCGLIB$$0.CGLIB$jwtTokenProvider$0(<generated>) ~[classes/:na]
+	at com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:348) ~[spring-context-6.2.1.jar:6.2.1]
+	at com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration$$SpringCGLIB$$0.jwtTokenProvider(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 73 common frames omitted
+
+2026-01-14T14:28:08.702+07:00  INFO [common-service,] 18840 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 18840 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:28:08.704+07:00  INFO [common-service,] 18840 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:28:09.087+07:00  INFO [common-service,] 18840 --- [common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T14:28:09.422+07:00  INFO [common-service,] 18840 --- [common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98697950-c157-3afd-bc19-6b63e3464b26
+2026-01-14T14:28:09.654+07:00  INFO [common-service,] 18840 --- [common-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14T14:28:09.664+07:00  INFO [common-service,] 18840 --- [common-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14T14:28:09.664+07:00  INFO [common-service,] 18840 --- [common-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-14T14:28:09.713+07:00  INFO [common-service,] 18840 --- [common-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-14T14:28:09.713+07:00  INFO [common-service,] 18840 --- [common-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 976 ms
+2026-01-14T14:28:09.724+07:00 ERROR [common-service,] 18840 --- [common-service] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'jwtAuthenticationFilter' parameter 0: Error creating bean with name 'jwtTokenProvider' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Failed to instantiate [com.example.commonserviceofficial.security.JwtTokenProvider]: Factory method 'jwtTokenProvider' threw exception with message: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+2026-01-14T14:28:09.745+07:00  INFO [common-service,] 18840 --- [common-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-14T14:28:09.750+07:00  WARN [common-service,] 18840 --- [common-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-01-14T14:28:09.760+07:00  INFO [common-service,] 18840 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:28:09.775+07:00 ERROR [common-service,] 18840 --- [common-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.example.commonserviceofficial.CommonServiceOfficialApplication.main(CommonServiceOfficialApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.4.1.jar:3.4.1]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'jwtAuthenticationFilter' parameter 0: Error creating bean with name 'jwtTokenProvider' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Failed to instantiate [com.example.commonserviceofficial.security.JwtTokenProvider]: Factory method 'jwtTokenProvider' threw exception with message: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.1.jar:3.4.1]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Failed to instantiate [com.example.commonserviceofficial.security.JwtTokenProvider]: Factory method 'jwtTokenProvider' threw exception with message: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 56 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.commonserviceofficial.security.JwtTokenProvider]: Factory method 'jwtTokenProvider' threw exception with message: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 70 common frames omitted
+Caused by: io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at io.jsonwebtoken.security.Keys.hmacShaKeyFor(Keys.java:96) ~[jjwt-api-0.11.5.jar:0.11.5]
+	at com.example.commonserviceofficial.security.JwtTokenProvider.<init>(JwtTokenProvider.java:16) ~[classes/:na]
+	at com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration.jwtTokenProvider(SecurityAutoConfiguration.java:24) ~[classes/:na]
+	at com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration$$SpringCGLIB$$0.CGLIB$jwtTokenProvider$1(<generated>) ~[classes/:na]
+	at com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:348) ~[spring-context-6.2.1.jar:6.2.1]
+	at com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration$$SpringCGLIB$$0.jwtTokenProvider(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 73 common frames omitted
+
+2026-01-14T14:31:28.813+07:00  INFO [common-service,] 11084 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 11084 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:31:28.815+07:00 DEBUG [common-service,] 11084 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T14:31:28.815+07:00  INFO [common-service,] 11084 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:31:29.201+07:00  INFO [common-service,] 11084 --- [common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T14:31:29.532+07:00  INFO [common-service,] 11084 --- [common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98697950-c157-3afd-bc19-6b63e3464b26
+2026-01-14T14:31:29.768+07:00  INFO [common-service,] 11084 --- [common-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14T14:31:29.777+07:00  INFO [common-service,] 11084 --- [common-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14T14:31:29.777+07:00  INFO [common-service,] 11084 --- [common-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-14T14:31:29.824+07:00  INFO [common-service,] 11084 --- [common-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-14T14:31:29.825+07:00  INFO [common-service,] 11084 --- [common-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 977 ms
+2026-01-14T14:31:29.863+07:00 DEBUG [common-service,] 11084 --- [common-service] [main] c.e.c.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-14T14:31:29.864+07:00 DEBUG [common-service,] 11084 --- [common-service] [main] c.e.c.logging.TraceIdFilter              : Filter 'traceIdFilter' configured for use
+2026-01-14T14:31:29.864+07:00 DEBUG [common-service,] 11084 --- [common-service] [main] c.e.c.l.filter.RequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
+2026-01-14T14:31:29.913+07:00  WARN [common-service,] 11084 --- [common-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 11632ed2-e5ae-4fd6-a1a0-63a28464efa3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-14T14:31:29.930+07:00  INFO [common-service,] 11084 --- [common-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-14T14:31:30.120+07:00  WARN [common-service,] 11084 --- [common-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.gateway.config.GatewayClassPathWarningAutoConfiguration$SpringMvcFoundOnClasspathConfiguration': Failed to instantiate [org.springframework.cloud.gateway.config.GatewayClassPathWarningAutoConfiguration$SpringMvcFoundOnClasspathConfiguration]: Constructor threw exception
+2026-01-14T14:31:30.123+07:00  INFO [common-service,] 11084 --- [common-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-14T14:31:30.136+07:00  INFO [common-service,] 11084 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:31:30.150+07:00 ERROR [common-service,] 11084 --- [common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Spring MVC found on classpath, which is incompatible with Spring Cloud Gateway.
+
+Action:
+
+Please set spring.main.web-application-type=reactive or remove spring-boot-starter-web dependency.
+
+2026-01-14T14:37:07.317+07:00  INFO [common-service,] 9260 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 9260 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:37:07.319+07:00 DEBUG [common-service,] 9260 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T14:37:07.320+07:00  INFO [common-service,] 9260 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:37:07.709+07:00  INFO [common-service,] 9260 --- [common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T14:37:08.040+07:00  INFO [common-service,] 9260 --- [common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98697950-c157-3afd-bc19-6b63e3464b26
+2026-01-14T14:37:08.270+07:00  INFO [common-service,] 9260 --- [common-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14T14:37:08.279+07:00  INFO [common-service,] 9260 --- [common-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14T14:37:08.279+07:00  INFO [common-service,] 9260 --- [common-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-14T14:37:08.325+07:00  INFO [common-service,] 9260 --- [common-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-14T14:37:08.325+07:00  INFO [common-service,] 9260 --- [common-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 975 ms
+2026-01-14T14:37:08.364+07:00 DEBUG [common-service,] 9260 --- [common-service] [main] c.e.c.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-14T14:37:08.364+07:00 DEBUG [common-service,] 9260 --- [common-service] [main] c.e.c.logging.TraceIdFilter              : Filter 'traceIdFilter' configured for use
+2026-01-14T14:37:08.364+07:00 DEBUG [common-service,] 9260 --- [common-service] [main] c.e.c.l.filter.RequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
+2026-01-14T14:37:08.413+07:00  WARN [common-service,] 9260 --- [common-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 22fa5563-77d7-47b0-9517-1986263e3507
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-14T14:37:08.429+07:00  INFO [common-service,] 9260 --- [common-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-14T14:37:08.618+07:00  WARN [common-service,] 9260 --- [common-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.gateway.config.GatewayClassPathWarningAutoConfiguration$SpringMvcFoundOnClasspathConfiguration': Failed to instantiate [org.springframework.cloud.gateway.config.GatewayClassPathWarningAutoConfiguration$SpringMvcFoundOnClasspathConfiguration]: Constructor threw exception
+2026-01-14T14:37:08.620+07:00  INFO [common-service,] 9260 --- [common-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-14T14:37:08.633+07:00  INFO [common-service,] 9260 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:37:08.647+07:00 ERROR [common-service,] 9260 --- [common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Spring MVC found on classpath, which is incompatible with Spring Cloud Gateway.
+
+Action:
+
+Please set spring.main.web-application-type=reactive or remove spring-boot-starter-web dependency.
+
+2026-01-14T14:37:46.285+07:00  INFO [common-service,] 19644 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 19644 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:37:46.287+07:00 DEBUG [common-service,] 19644 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T14:37:46.288+07:00  INFO [common-service,] 19644 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:37:46.646+07:00  INFO [common-service,] 19644 --- [common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T14:37:46.949+07:00  INFO [common-service,] 19644 --- [common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2785767a-b612-3ccc-9f39-ee47d70758be
+2026-01-14T14:37:47.156+07:00  INFO [common-service,] 19644 --- [common-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14T14:37:47.165+07:00  INFO [common-service,] 19644 --- [common-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14T14:37:47.166+07:00  INFO [common-service,] 19644 --- [common-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-14T14:37:47.240+07:00  WARN [common-service,] 19644 --- [common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-14T14:37:47.249+07:00  INFO [common-service,] 19644 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:37:47.265+07:00 ERROR [common-service,] 19644 --- [common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-01-14T14:37:59.515+07:00  INFO [common-service,] 20336 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 20336 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:37:59.517+07:00 DEBUG [common-service,] 20336 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T14:37:59.518+07:00  INFO [common-service,] 20336 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:37:59.867+07:00  WARN [common-service,] 20336 --- [common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'jwtTokenProvider' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]] for bean 'jwtTokenProvider' since there is already [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] bound.
+2026-01-14T14:37:59.874+07:00  INFO [common-service,] 20336 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:37:59.890+07:00 ERROR [common-service,] 20336 --- [common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'jwtTokenProvider', defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2026-01-14T14:38:30.525+07:00  INFO [common-service,] 4624 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 4624 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T14:38:30.527+07:00 DEBUG [common-service,] 4624 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T14:38:30.527+07:00  INFO [common-service,] 4624 --- [common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:38:30.878+07:00  INFO [common-service,] 4624 --- [common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=commonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T14:38:31.177+07:00  INFO [common-service,] 4624 --- [common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2785767a-b612-3ccc-9f39-ee47d70758be
+2026-01-14T14:38:31.377+07:00  INFO [common-service,] 4624 --- [common-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14T14:38:31.387+07:00  INFO [common-service,] 4624 --- [common-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14T14:38:31.388+07:00  INFO [common-service,] 4624 --- [common-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-14T14:38:31.457+07:00  WARN [common-service,] 4624 --- [common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-14T14:38:31.466+07:00  INFO [common-service,] 4624 --- [common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T14:38:31.482+07:00 ERROR [common-service,] 4624 --- [common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-01-14T16:26:54.693+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 21836 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T16:26:54.695+07:00 DEBUG [hddt-common-service,] 21836 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T16:26:54.696+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T16:26:55.462+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'jwtTokenProvider' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=com.example.commonserviceofficial.autoconfigure.CommonAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/CommonAutoConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration; factoryMethodName=jwtTokenProvider; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]]
+2026-01-14T16:26:55.655+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9621fd35-2c5e-3307-8bdf-2b038b225d67
+2026-01-14T16:26:55.896+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14T16:26:55.906+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14T16:26:55.906+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-14T16:26:56.520+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T16:26:56.520+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T16:26:56.520+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T16:26:56.520+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T16:26:56.520+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T16:26:56.520+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T16:26:56.520+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T16:26:56.521+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T16:26:56.521+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T16:26:56.521+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T16:26:56.521+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T16:26:56.521+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T16:26:56.521+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T16:26:56.521+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T16:26:56.599+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 648c30fe-2d66-495f-a0e1-7dcc122afa13
+
+2026-01-14T16:26:56.724+07:00  WARN [hddt-common-service,] 21836 --- [hddt-common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/commonserviceofficial/autoconfigure/SecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-14T16:26:56.734+07:00  INFO [hddt-common-service,] 21836 --- [hddt-common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T16:26:56.757+07:00 ERROR [hddt-common-service,] 21836 --- [hddt-common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-01-14T16:38:03.637+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.12 with PID 21104 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in c:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T16:38:03.639+07:00 DEBUG [hddt-common-service,] 21104 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T16:38:03.640+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T16:38:04.230+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fa2c97fd-2d3d-3619-aa92-0f006e89b40d
+2026-01-14T16:38:04.910+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T16:38:04.911+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T16:38:04.911+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T16:38:04.911+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T16:38:04.911+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T16:38:04.911+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T16:38:04.911+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T16:38:04.911+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T16:38:04.912+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T16:38:04.912+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T16:38:04.912+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T16:38:04.912+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T16:38:04.912+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T16:38:04.912+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T16:38:05.004+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 68968873-3a81-4519-8fb6-eaad74d6a83d
+
+2026-01-14T16:38:05.213+07:00  WARN [hddt-common-service,] 21104 --- [hddt-common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@7ac48e10 description = 'Spring Boot [3.4.1] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2026-01-14T16:38:05.223+07:00  INFO [hddt-common-service,] 21104 --- [hddt-common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T16:38:05.235+07:00 ERROR [hddt-common-service,] 21104 --- [hddt-common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.4.1] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+2026-01-14T16:39:36.378+07:00  INFO [hddt-common-service,] 26944 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.12 with PID 26944 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in c:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T16:39:36.380+07:00 DEBUG [hddt-common-service,] 26944 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T16:39:36.381+07:00  INFO [hddt-common-service,] 26944 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T16:39:37.165+07:00  INFO [hddt-common-service,] 26944 --- [hddt-common-service] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-14T16:39:37.294+07:00  INFO [hddt-common-service,] 26944 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4d4ac9f5-05d8-47e9-8909-1e4788d27713
+
+2026-01-14T16:39:37.567+07:00  INFO [hddt-common-service,] 26944 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+2026-01-14T16:39:37.579+07:00  INFO [hddt-common-service,] 26944 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 1.6 seconds (process running for 1.86)
+2026-01-14T16:54:32.594+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 8680 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T16:54:32.596+07:00 DEBUG [hddt-common-service,] 8680 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T16:54:32.597+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T16:54:33.318+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=64d16531-511c-33cc-a47e-bca0ebc3b94e
+2026-01-14T16:54:33.961+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T16:54:33.961+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T16:54:33.961+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T16:54:33.961+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T16:54:33.961+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T16:54:33.961+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T16:54:33.961+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T16:54:33.961+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T16:54:33.962+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T16:54:33.962+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T16:54:33.962+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T16:54:33.962+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T16:54:33.962+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T16:54:33.962+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T16:54:34.043+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2b9ac9de-7fa3-4ff7-aca5-0a4c3e61f3aa
+
+2026-01-14T16:54:34.276+07:00  WARN [hddt-common-service,] 8680 --- [hddt-common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@439f2d87 description = 'Spring Boot [3.4.1] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2026-01-14T16:54:34.289+07:00  INFO [hddt-common-service,] 8680 --- [hddt-common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T16:54:34.304+07:00 ERROR [hddt-common-service,] 8680 --- [hddt-common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.4.1] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+2026-01-14T16:55:18.106+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.12 with PID 11820 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T16:55:18.109+07:00 DEBUG [hddt-common-service,] 11820 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-14T16:55:18.110+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T16:55:18.697+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fa2c97fd-2d3d-3619-aa92-0f006e89b40d
+2026-01-14T16:55:19.335+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T16:55:19.336+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T16:55:19.336+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T16:55:19.336+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T16:55:19.336+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T16:55:19.337+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T16:55:19.337+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T16:55:19.337+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T16:55:19.337+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T16:55:19.338+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T16:55:19.338+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T16:55:19.338+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T16:55:19.338+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T16:55:19.338+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T16:55:19.420+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0fb6085d-729d-441f-9c57-66d526eb4ecc
+
+2026-01-14T16:55:19.630+07:00  WARN [hddt-common-service,] 11820 --- [hddt-common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@6b70d1fb description = 'Spring Boot [3.4.1] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2026-01-14T16:55:19.645+07:00  INFO [hddt-common-service,] 11820 --- [hddt-common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T16:55:19.662+07:00 ERROR [hddt-common-service,] 11820 --- [hddt-common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.4.1] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+2026-01-14T16:58:09.814+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.12 with PID 11156 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T16:58:09.816+07:00 DEBUG [hddt-common-service,] 11156 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-14T16:58:09.817+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T16:58:10.418+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=683f564a-e22e-30f8-aa19-5b95db13bcb1
+2026-01-14T16:58:11.079+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T16:58:11.079+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T16:58:11.080+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T16:58:11.080+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T16:58:11.080+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T16:58:11.081+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T16:58:11.081+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T16:58:11.081+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T16:58:11.082+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T16:58:11.082+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T16:58:11.082+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T16:58:11.082+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T16:58:11.082+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T16:58:11.083+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T16:58:11.165+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 269c2ff3-037c-40a9-9e12-38e956e6f12f
+
+2026-01-14T16:58:13.574+07:00  WARN [hddt-common-service,] 11156 --- [hddt-common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-01-14T16:58:13.598+07:00  INFO [hddt-common-service,] 11156 --- [hddt-common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T16:58:13.616+07:00 ERROR [hddt-common-service,] 11156 --- [hddt-common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-01-14T17:00:29.175+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.12 with PID 1188 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T17:00:29.177+07:00 DEBUG [hddt-common-service,] 1188 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-14T17:00:29.178+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T17:00:29.768+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=683f564a-e22e-30f8-aa19-5b95db13bcb1
+2026-01-14T17:00:30.394+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T17:00:30.395+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T17:00:30.395+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T17:00:30.395+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T17:00:30.395+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T17:00:30.395+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T17:00:30.395+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T17:00:30.396+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T17:00:30.396+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T17:00:30.396+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T17:00:30.396+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T17:00:30.396+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T17:00:30.396+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T17:00:30.397+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T17:00:30.475+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8bdc3db6-834c-44d8-8cab-6207c22accbf
+
+2026-01-14T17:00:30.780+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2026-01-14T17:00:30.899+07:00  INFO [hddt-common-service,] 1188 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.188 seconds (process running for 2.476)
+2026-01-14T17:16:49.169+07:00  INFO [hddt-common-service,31e5c031-41b2-4daa-80af-be63d5e0991d] 1188 --- [hddt-common-service] [parallel-1] c.e.c.l.filter.RequestLoggingFilter      : [TRACE=84bc63ad-3ed4-4270-8648-deae7be079f4] GET http://localhost:8081/actuator/health ? 500 INTERNAL_SERVER_ERROR (67ms)
+2026-01-14T17:17:12.036+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 14312 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T17:17:12.038+07:00 DEBUG [hddt-common-service,] 14312 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-14T17:17:12.039+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T17:17:12.744+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e23fb259-216b-3392-bf77-a8e797ff7765
+2026-01-14T17:17:13.380+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T17:17:13.380+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T17:17:13.380+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T17:17:13.380+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T17:17:13.381+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T17:17:13.479+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f266df1f-ce12-4da4-ba66-ab546b5a5bb8
+
+2026-01-14T17:17:15.942+07:00  WARN [hddt-common-service,] 14312 --- [hddt-common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-01-14T17:17:15.959+07:00  INFO [hddt-common-service,] 14312 --- [hddt-common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-14T17:17:15.975+07:00 ERROR [hddt-common-service,] 14312 --- [hddt-common-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-01-14T17:18:16.283+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.12 with PID 25688 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T17:18:16.285+07:00 DEBUG [hddt-common-service,] 25688 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-14T17:18:16.287+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T17:18:16.976+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9f92dc0f-9597-3428-918b-712e1ee8fd1c
+2026-01-14T17:18:17.613+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T17:18:17.613+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T17:18:17.614+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T17:18:17.614+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T17:18:17.614+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T17:18:17.614+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T17:18:17.615+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T17:18:17.615+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T17:18:17.615+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T17:18:17.615+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T17:18:17.615+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T17:18:17.615+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T17:18:17.616+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T17:18:17.616+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T17:18:17.714+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0524ce0f-23b1-4dae-b177-15e325b30d86
+
+2026-01-14T17:18:18.015+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2026-01-14T17:18:18.135+07:00  INFO [hddt-common-service,] 25688 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.366 seconds (process running for 2.657)
+2026-01-14T17:19:28.307+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 6760 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T17:19:28.309+07:00 DEBUG [hddt-common-service,] 6760 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-14T17:19:28.310+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T17:19:29.026+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=89f3342e-9e0f-38de-b306-1c082c79e1b4
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T17:19:29.654+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T17:19:29.655+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T17:19:29.655+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T17:19:29.757+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b26ca4b0-3c45-44b0-8966-241be676a8b2
+
+2026-01-14T17:19:30.108+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2026-01-14T17:19:30.230+07:00  INFO [hddt-common-service,] 6760 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.373 seconds (process running for 2.983)
+2026-01-14T17:20:30.403+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.12 with PID 25768 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T17:20:30.406+07:00 DEBUG [hddt-common-service,] 25768 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-14T17:20:30.406+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T17:20:30.985+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9f92dc0f-9597-3428-918b-712e1ee8fd1c
+2026-01-14T17:20:31.611+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T17:20:31.612+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T17:20:31.612+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T17:20:31.612+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T17:20:31.612+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T17:20:31.613+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T17:20:31.613+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T17:20:31.613+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T17:20:31.613+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T17:20:31.613+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T17:20:31.614+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T17:20:31.614+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T17:20:31.614+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T17:20:31.614+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T17:20:31.701+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c225c478-bc1d-453e-8c57-3b619d60238c
+
+2026-01-14T17:20:32.009+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2026-01-14T17:20:32.130+07:00  INFO [hddt-common-service,] 25768 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.166 seconds (process running for 2.433)
+2026-01-14T17:24:12.540+07:00  INFO [hddt-common-service,7f4278fe-4f5f-4929-918c-28ade75f828e] 25768 --- [hddt-common-service] [parallel-1] c.e.c.l.filter.RequestLoggingFilter      : [TRACE=73c274a9-1938-48bb-ab7e-d1c391fb68f0] POST http://localhost:8081/actuator ? 500 INTERNAL_SERVER_ERROR (60ms)
+2026-01-14T17:24:26.419+07:00  INFO [hddt-common-service,ee54d660-1b63-47e3-9fad-e621104520c4] 25768 --- [hddt-common-service] [parallel-2] c.e.c.l.filter.RequestLoggingFilter      : [TRACE=6f8e33a8-aff7-467e-bc58-4df017a1c08c] GET http://localhost:8081/actuator ? 500 INTERNAL_SERVER_ERROR (4ms)
+2026-01-14T17:26:12.899+07:00  INFO [hddt-common-service,39379590-e530-46ad-8721-5eda30d4a99d] 25768 --- [hddt-common-service] [parallel-3] c.e.c.l.filter.RequestLoggingFilter      : [TRACE=fdc1d2fe-de97-4023-872e-82c9138f68c0] GET http://localhost:8081/api/test/hello ? 200 OK (13ms)
+2026-01-14T17:26:58.385+07:00  INFO [hddt-common-service,d490e2e8-3d7c-4460-aed8-440d69119c8a] 25768 --- [hddt-common-service] [parallel-4] c.e.c.l.filter.RequestLoggingFilter      : [TRACE=f0127d31-19f8-4e1c-a836-01062138451b] GET http://localhost:8081/api/test/actuator ? 500 INTERNAL_SERVER_ERROR (6ms)
+2026-01-14T17:29:05.473+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 21332 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-14T17:29:05.475+07:00 DEBUG [hddt-common-service,] 21332 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-14T17:29:05.476+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T17:29:06.126+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=89f3342e-9e0f-38de-b306-1c082c79e1b4
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-14T17:29:06.739+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-14T17:29:06.740+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-14T17:29:06.740+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-14T17:29:06.740+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-14T17:29:06.841+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c5490ddc-ba0c-40ee-b420-7f4360e9b5d5
+
+2026-01-14T17:29:07.191+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2026-01-14T17:29:07.306+07:00  INFO [hddt-common-service,] 21332 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.279 seconds (process running for 2.87)
+2026-01-14T17:29:30.145+07:00  INFO [hddt-common-service,16c6dbc8-06ee-4975-a747-55fd1d74da65] 21332 --- [hddt-common-service] [parallel-1] c.e.c.l.filter.RequestLoggingFilter      : [TRACE=178d6b64-f433-4a39-9361-08de9027728f] GET http://localhost:8081/api/test/actuator → 200 OK (82ms)
+2026-01-14T17:29:38.852+07:00  INFO [hddt-common-service,8336a897-73f7-4d34-80e6-a6c6cdc91693] 21332 --- [hddt-common-service] [parallel-2] c.e.c.l.filter.RequestLoggingFilter      : [TRACE=c821321f-fac1-4f6c-9607-2b206de0d162] GET http://localhost:8081/api/test/hello → 200 OK (7ms)
+2026-01-15T11:29:32.289+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 21056 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-15T11:29:32.297+07:00 DEBUG [hddt-common-service,] 21056 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-15T11:29:32.298+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-15T11:29:33.187+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=89f3342e-9e0f-38de-b306-1c082c79e1b4
+2026-01-15T11:29:33.859+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-15T11:29:33.859+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-15T11:29:33.859+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-15T11:29:33.859+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-15T11:29:33.859+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-15T11:29:33.860+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-15T11:29:33.973+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3008283c-247a-4355-bd64-d6dc47456d6d
+
+2026-01-15T11:29:34.385+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2026-01-15T11:29:34.501+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.686 seconds (process running for 6.093)
