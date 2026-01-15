@@ -1,8 +1,5 @@
-package com.example.commonserviceofficial.security.reactive;
+package com.example.commonserviceofficial.security;
 
-import com.example.commonserviceofficial.security.JwtClaims;
-import com.example.commonserviceofficial.security.JwtTokenProvider;
-import com.example.commonserviceofficial.security.RoleAuthorityMapper;
 import com.example.commonserviceofficial.security.jwt.JwtConstants;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -14,13 +11,13 @@ import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
 
-/**
- * JWT Authentication Filter for Reactive (WebFlux) applications
- */
-@RequiredArgsConstructor
 public class JwtAuthenticationFilter implements WebFilter {
 
     private final JwtTokenProvider tokenProvider;
+
+    public JwtAuthenticationFilter(JwtTokenProvider tokenProvider) {
+        this.tokenProvider = tokenProvider;
+    }
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {

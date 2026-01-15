@@ -1,5 +1,4 @@
 com.example.commonserviceofficial.autoconfigure.CommonAutoConfiguration
 com.example.commonserviceofficial.autoconfigure.LoggingAutoConfiguration
 com.example.commonserviceofficial.autoconfigure.SecurityAutoConfiguration
-com.example.commonserviceofficial.autoconfigure.SecurityServletAutoConfiguration
 com.example.commonserviceofficial.autoconfigure.GatewayAutoConfiguration

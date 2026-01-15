@@ -955,3 +955,75 @@ Using generated security password: 3008283c-247a-4355-bd64-d6dc47456d6d
 
 2026-01-15T11:29:34.385+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
 2026-01-15T11:29:34.501+07:00  INFO [hddt-common-service,] 21056 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.686 seconds (process running for 6.093)
+2026-01-15T14:07:26.508+07:00  INFO [hddt-common-service,] 18896 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 18896 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-15T14:07:26.510+07:00 DEBUG [hddt-common-service,] 18896 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-15T14:07:26.511+07:00  INFO [hddt-common-service,] 18896 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-15T14:07:26.733+07:00  WARN [hddt-common-service,] 18896 --- [hddt-common-service] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Unable to read meta-data for class com.example.commonserviceofficial.autoconfigure.SecurityServletAutoConfiguration
+2026-01-15T14:07:26.805+07:00  INFO [hddt-common-service,] 18896 --- [hddt-common-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-15T14:07:26.823+07:00 ERROR [hddt-common-service,] 18896 --- [hddt-common-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Unable to read meta-data for class com.example.commonserviceofficial.autoconfigure.SecurityServletAutoConfiguration
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:243) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:214) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:67) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360) ~[na:na]
+	at java.base/java.util.TimSort.sort(TimSort.java:234) ~[na:na]
+	at java.base/java.util.Arrays.sort(Arrays.java:1307) ~[na:na]
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721) ~[na:na]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:66) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:467) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:452) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:816) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.example.commonserviceofficial.CommonServiceOfficialApplication.main(CommonServiceOfficialApplication.java:10) ~[classes/:na]
+Caused by: java.io.FileNotFoundException: class path resource [com/example/commonserviceofficial/autoconfigure/SecurityServletAutoConfiguration.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:239) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	... 26 common frames omitted
+
+2026-01-15T14:08:00.435+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Starting CommonServiceOfficialApplication using Java 17.0.14 with PID 28472 (C:\OPS\OPSProjects\HDDT\common-service-official\target\classes started by admin in C:\OPS\OPSProjects\HDDT\common-service-official)
+2026-01-15T14:08:00.437+07:00 DEBUG [hddt-common-service,] 28472 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-01-15T14:08:00.437+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-15T14:08:01.053+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=89f3342e-9e0f-38de-b306-1c082c79e1b4
+2026-01-15T14:08:01.662+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-01-15T14:08:01.663+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-01-15T14:08:01.771+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 195272ae-797e-4d9a-8e2a-8ffb50ed8617
+
+2026-01-15T14:08:02.129+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2026-01-15T14:08:02.245+07:00  INFO [hddt-common-service,] 28472 --- [hddt-common-service] [main] c.e.c.CommonServiceOfficialApplication   : Started CommonServiceOfficialApplication in 2.271 seconds (process running for 2.975)
