@@ -1,0 +1,1 @@
+Ma OTP cua ban la: [(${otpCode})]. Ma co hieu luc trong [(${validityMinutes})] phut. Khong chia se ma nay voi ai. - HDDT

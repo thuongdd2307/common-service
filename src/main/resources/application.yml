@@ -139,3 +139,59 @@ sequence:
     base-path: ${ZOOKEEPER_BASE_PATH:/sequences}
     sync-interval: 10  # Sync với ZooKeeper mỗi 10 lần generate
     sync-threshold: 50 # Sync khi chênh lệch >= 50
+
+
+# ===================== NOTIFICATION SERVICES =====================
+notification:
+  # Email Configuration
+  email:
+    enabled: ${EMAIL_ENABLED:true}
+    async: ${EMAIL_ASYNC:true}
+    retry:
+      max-attempts: ${EMAIL_MAX_RETRY:3}
+  
+  # SMS Configuration  
+  sms:
+    enabled: ${SMS_ENABLED:true}
+    provider: ${SMS_PROVIDER:mock}  # twilio, aws, viettel, mock
+    async: ${SMS_ASYNC:true}
+    retry:
+      max-attempts: ${SMS_MAX_RETRY:3}
+    
+    # Twilio Settings
+    twilio:
+      account-sid: ${TWILIO_ACCOUNT_SID:}
+      auth-token: ${TWILIO_AUTH_TOKEN:}
+      from-number: ${TWILIO_FROM_NUMBER:}
+    
+    # AWS SNS Settings
+    aws:
+      access-key: ${AWS_ACCESS_KEY:}
+      secret-key: ${AWS_SECRET_KEY:}
+      region: ${AWS_REGION:us-east-1}
+    
+    # Viettel SMS Settings
+    viettel:
+      username: ${VIETTEL_SMS_USERNAME:}
+      password: ${VIETTEL_SMS_PASSWORD:}
+      cp-code: ${VIETTEL_CP_CODE:}
+      service-id: ${VIETTEL_SERVICE_ID:}
+
+
+# ===================== SPRING MAIL =====================
+spring:
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    from-name: ${MAIL_FROM_NAME:HDDT System}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000

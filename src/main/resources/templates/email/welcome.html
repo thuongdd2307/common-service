@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chào mừng đến với HDDT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+        }
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Chào mừng đến với HDDT!</h1>
+    </div>
+    
+    <div class="content">
+        <h2>Xin chào <span th:text="${userName}">User</span>!</h2>
+        
+        <p>Cảm ơn bạn đã đăng ký tài khoản tại hệ thống HDDT. Chúng tôi rất vui mừng được chào đón bạn!</p>
+        
+        <p><strong>Thông tin tài khoản:</strong></p>
+        <ul>
+            <li>Email: <span th:text="${userEmail}">user@example.com</span></li>
+            <li>Ngày đăng ký: <span th:text="${registrationDate}">2026-01-15</span></li>
+            <li>Mã khách hàng: <span th:text="${customerId}">CUST001</span></li>
+        </ul>
+        
+        <p>Để bắt đầu sử dụng dịch vụ, vui lòng nhấn vào nút bên dưới:</p>
+        
+        <a th:href="${activationUrl}" class="button">Kích hoạt tài khoản</a>
+        
+        <p>Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại liên hệ với chúng tôi qua email support@hddt.com hoặc hotline 1900-xxxx.</p>
+        
+        <p>Trân trọng,<br>
+        Đội ngũ HDDT</p>
+    </div>
+    
+    <div class="footer">
+        <p>© 2026 HDDT Company. All rights reserved.</p>
+        <p>Đây là email tự động, vui lòng không reply.</p>
+    </div>
+</body>
+</html>

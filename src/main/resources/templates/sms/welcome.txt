@@ -1,0 +1,1 @@
+Chao mung [(${userName})] den voi HDDT! Tai khoan cua ban da duoc tao thanh cong. Ma khach hang: [(${customerId})]. Cam on ban da tin tuong su dung dich vu cua chung toi. - HDDT

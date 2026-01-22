@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mã OTP xác thực</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+        }
+        .otp-code {
+            background: #fff;
+            border: 2px dashed #ff6b6b;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff6b6b;
+            letter-spacing: 5px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔐 Mã OTP Xác Thực</h1>
+    </div>
+    
+    <div class="content">
+        <h2>Xin chào <span th:text="${userName}">User</span>!</h2>
+        
+        <p>Bạn đã yêu cầu mã OTP để xác thực tài khoản. Vui lòng sử dụng mã bên dưới:</p>
+        
+        <div class="otp-code" th:text="${otpCode}">123456</div>
+        
+        <p><strong>Thời gian hiệu lực:</strong> <span th:text="${validityMinutes}">5</span> phút</p>
+        <p><strong>Thời gian tạo:</strong> <span th:text="${createdAt}">2026-01-15 10:30:00</span></p>
+        
+        <div class="warning">
+            <strong>⚠️ Lưu ý quan trọng:</strong>
+            <ul style="text-align: left; margin: 10px 0;">
+                <li>Mã OTP chỉ có hiệu lực trong <span th:text="${validityMinutes}">5</span> phút</li>
+                <li>Không chia sẻ mã này với bất kỳ ai</li>
+                <li>Nếu bạn không yêu cầu mã này, vui lòng bỏ qua email</li>
+                <li>Liên hệ ngay với chúng tôi nếu có hoạt động đáng nghi</li>
+            </ul>
+        </div>
+        
+        <p>Nếu bạn cần hỗ trợ, liên hệ:</p>
+        <p>📧 Email: support@hddt.com<br>
+        📞 Hotline: 1900-xxxx</p>
+    </div>
+    
+    <div class="footer">
+        <p>© 2026 HDDT Company. All rights reserved.</p>
+        <p>Đây là email tự động, vui lòng không reply.</p>
+    </div>
+</body>
+</html>
