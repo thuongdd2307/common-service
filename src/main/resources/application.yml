@@ -114,8 +114,28 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: health,info,metrics,prometheus
 
   endpoint:
     health:
-      show-details: never
+      show-details: always
+
+
+# ===================== ZOOKEEPER =====================
+zookeeper:
+  connection-string: ${ZOOKEEPER_CONNECTION_STRING:localhost:2181}
+  session-timeout: ${ZOOKEEPER_SESSION_TIMEOUT:60000}
+  connection-timeout: ${ZOOKEEPER_CONNECTION_TIMEOUT:15000}
+  base-path: ${ZOOKEEPER_BASE_PATH:/sequences}
+  retry-policy:
+    base-sleep-time-ms: 1000
+    max-retries: 3
+    max-sleep-ms: 30000
+
+
+# ===================== SEQUENCE GENERATOR =====================
+sequence:
+  zookeeper:
+    base-path: ${ZOOKEEPER_BASE_PATH:/sequences}
+    sync-interval: 10  # Sync với ZooKeeper mỗi 10 lần generate
+    sync-threshold: 50 # Sync khi chênh lệch >= 50
