@@ -11,9 +11,22 @@ spring:
     compatibility-verifier:
       enabled: false
 
-server:
-  port: 8081
-
+  # ===================== SPRING MAIL =====================
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    from-name: ${MAIL_FROM_NAME:HDDT System}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
 
   jackson:
     serialization:
@@ -178,20 +191,5 @@ notification:
       service-id: ${VIETTEL_SERVICE_ID:}
 
 
-# ===================== SPRING MAIL =====================
-spring:
-  mail:
-    host: ${MAIL_HOST:smtp.gmail.com}
-    port: ${MAIL_PORT:587}
-    username: ${MAIL_USERNAME:}
-    password: ${MAIL_PASSWORD:}
-    from-name: ${MAIL_FROM_NAME:HDDT System}
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-          connectiontimeout: 5000
-          timeout: 3000
-          writetimeout: 5000
+server:
+  port: 8081
